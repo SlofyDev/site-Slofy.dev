@@ -21,9 +21,11 @@
                         <a class="nav-link" href="{{ route('dashboard') }}">Meu Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="POST">
+                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
                             @csrf
-                            <button class="btn btn-link nav-link" type="submit">Sair</button>
+                            <button type="submit" class="nav-link border-0 bg-transparent" style="cursor: pointer;">
+                                <i class="fas fa-sign-out-alt me-1"></i>Sair
+                            </button>
                         </form>
                     </li>
                 @else
